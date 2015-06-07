@@ -1,12 +1,13 @@
 // js/app.js --> main module with dependency injection
 
-var zvtDashModule = angular.module('zvtDashModule', []);
+var TestMessageModule = angular.module('TestMessageModule', []);
+var ProtoModule = angular.module('ProtoModule', ['TestMessageModule']);
 
 
-zvtDashModule.controller('protoController', function() {
+TestMessageModule.controller('MessageController', function() {
 	
 	var vm = this;
 	
-	vm.testMsg = "Hello world!";
+	vm.test = 'Hello world!';
 	
 });
